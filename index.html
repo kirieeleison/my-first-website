@@ -2,8 +2,7 @@
 <html lang="uk">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My GitHub Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -32,7 +31,7 @@
         ✦ MY FIRST GITHUB PROJECT
       </span>
 
-    <h1>Варіант А</h1>
+      <h1>Привіт! Це моя <span class="gradient-text">персональна сторінка</span></h1>
 
       <p class="hero-description">
         Я навчаюся працювати з Git та GitHub.
@@ -57,12 +56,8 @@
       <div class="orbit"></div>
       <div class="floating-icon icon-git">⑂</div>
       <div class="main-icon">⌘</div>
-      <div class="floating-icon icon-code">
-        &lt;/&gt;
-      </div>
-      <div class="floating-icon icon-terminal">
-        &gt;_
-      </div>
+      <div class="floating-icon icon-code">&lt;/&gt;</div>
+      <div class="floating-icon icon-terminal">&gt;_</div>
     </div>
   </section>
 
@@ -73,9 +68,21 @@
       <div>
         <h2>Про мене</h2>
         <p>
-          Я навчаюся працювати
-          з Git та GitHub.
+          Я навчаюся працювати з Git та GitHub.
         </p>
+      </div>
+    </section>
+
+    <section class="glass-card" id="hobbies">
+      <div class="card-icon pink">♥</div>
+      <div>
+        <h2>Мої захоплення</h2>
+        <ul class="hobbies-list">
+          <li>Програмування</li>
+          <li>Подорожі</li>
+          <li>Читання</li>
+          <li>Спорт</li>
+        </ul>
       </div>
     </section>
 
@@ -83,33 +90,95 @@
       <div class="card-icon cyan">✉</div>
       <div>
         <h2>Мої контакти</h2>
-        <a href="lolzmum924@gmail.com>
-          example@gmail.com
+        <a href="mailto:lolzmum924@gmail.com">
+          lolzmum924@gmail.com
         </a>
       </div>
     </section>
 
   </div>
 
+  <section class="git-panel" id="git">
+
+    <div class="section-heading">
+      <span class="git-symbol">⑂</span>
+      <h2>Результати роботи з Git</h2>
+    </div>
+
+    <p class="section-description">
+      Історія комітів, гілки та результати виконання Git-команд.
+    </p>
+
+    <div class="git-tabs">
+
+      <input type="radio" name="git-tab" id="tab-status" checked>
+      <input type="radio" name="git-tab" id="tab-branch">
+      <input type="radio" name="git-tab" id="tab-log">
+      <input type="radio" name="git-tab" id="tab-merge">
+
+      <div class="tab-labels">
+        <label for="tab-status">Git Status</label>
+        <label for="tab-branch">Git Branch</label>
+        <label for="tab-log">Git Log</label>
+        <label for="tab-merge">Merge History</label>
+      </div>
+
+      <div class="terminal">
+
+        <div class="terminal-header">
+          <div class="window-dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">git-terminal</span>
+        </div>
+
+        <div class="terminal-body">
+
+          <pre class="tab-content status"><code>$ git status
+
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean</code></pre>
+
+          <pre class="tab-content branch"><code>$ git branch -a
+
+* main
+  feature/about
+  remotes/origin/main
+  remotes/origin/feature/about</code></pre>
+
+          <pre class="tab-content log"><code>$ git log --oneline
+
+b5d895a Resolve merge conflict
+a43c20e Change page heading
+b5d895a Update main heading
+e1f2a3b Update hobbies list
+d4c3b2a Add hobbies section
+c2b1a0f Add initial website</code></pre>
+
+          <pre class="tab-content merge"><code>$ git log --merges
+
+commit b5d895a1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7
+Merge: a43c20e b5d895a
+Author: kirieeleison <lolzmum924@gmail.com>
+Date:   Tue Oct 27 01:00:00 2026 +0200
+
+    Resolve merge conflict</code></pre>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
   <footer class="footer">
     <p>Made with Git & GitHub Pages</p>
   </footer>
 
 </div>
-<section class="glass-card" id="hobbies">
-  <div class="card-icon pink">♥</div>
-
-  <div>
-    <h2>Мої захоплення</h2>
-
-    <ul class="hobbies-list">
-      <li>Програмування</li>
-      <li>Подорожі</li>
-      <li>Читання</li>
-      <li>Спорт</li>
-    </ul>
-  </div>
-</section>
 
 </body>
 </html>
